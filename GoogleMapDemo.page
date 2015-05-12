@@ -16,7 +16,7 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script>
-//JS fucntion to initialize Google Map    
+//JS function to initialize Google Map    
 function initialize() {
   var geocoder= new google.maps.Geocoder();
   var address = "{!Contact.MailingStreet}, " + "{!Contact.MailingCity}, " + "{!Contact.MailingPostalCode}, " + "{!Contact.MailingCountry}";
