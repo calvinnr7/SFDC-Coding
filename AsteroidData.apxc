@@ -1,0 +1,145 @@
+public class AsteroidData{
+    
+    public cls_links links;
+    
+    public String neo_reference_id;	//3127391
+    
+    public String name;	//(2002 LY1)
+    
+    public String nasa_jpl_url;	//http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3127391
+    
+    public Double absolute_magnitude_h;	//22.1
+    
+    public cls_estimated_diameter estimated_diameter;
+    
+    public boolean is_potentially_hazardous_asteroid;
+    
+    public cls_close_approach_data[] close_approach_data;
+    
+    public cls_orbital_data orbital_data;
+    public class cls_links {
+        
+        public String self;	//https://api.nasa.gov/neo/rest/v1/neo/3127391?api_key=mJGTltpEaWR8PWu8hPlXzMOXW7fCrBq5Lf26642j
+    }
+    public class cls_estimated_diameter {
+        
+        public cls_kilometers kilometers;
+        
+        public cls_meters meters;
+        
+        public cls_miles miles;
+        
+        public cls_feet feet;
+    }
+    public class cls_kilometers {
+        
+        public Double estimated_diameter_min;	//0.1010543415
+        
+        public Double estimated_diameter_max;	//0.2259643771
+    }
+    public class cls_meters {
+        
+        public Double estimated_diameter_min;	//101.054341542
+        
+        public Double estimated_diameter_max;	//225.9643771094
+    }
+    public class cls_miles {
+        
+        public Double estimated_diameter_min;	//0.0627922373
+        
+        public Double estimated_diameter_max;	//0.140407711
+    }
+    public class cls_feet {
+        
+        public Double estimated_diameter_min;	//331.5431259047
+        
+        public Double estimated_diameter_max;	//741.3529669956
+    }
+    public class cls_close_approach_data {
+        
+        public String close_approach_date;	//2016-06-12
+        
+        public String epoch_date_close_approach;	//1465714800000
+        
+        public cls_relative_velocity relative_velocity;
+        
+        public cls_miss_distance miss_distance;
+        
+        public String orbiting_body;	//Earth
+    }
+    public class cls_relative_velocity {
+        
+        public String kilometers_per_second;	//9.8901260657
+        
+        public String kilometers_per_hour;	//35604.4538365153
+        
+        public String miles_per_hour;	//22123.2229963614
+    }
+    public class cls_miss_distance {
+        
+        public String astronomical;	//0.0510081419
+        
+        public String lunar;	//19.8421669006
+        
+        public String kilometers;	//7630709.5
+        
+        public String miles;	//4741503
+    }
+    public class cls_orbital_data {
+    }
+    
+    public static AsteroidData parse(String json){
+        return (AsteroidData) System.JSON.deserialize(json, AsteroidData.class);
+    }
+    
+    /*
+static testMethod void testParse() {
+String json=		'{'+
+'      "links" : {'+
+'        "self" : "https://api.nasa.gov/neo/rest/v1/neo/3127391?api_key=mJGTltpEaWR8PWu8hPlXzMOXW7fCrBq5Lf26642j"'+
+'      },'+
+'      "neo_reference_id" : "3127391",'+
+'      "name" : "(2002 LY1)",'+
+'      "nasa_jpl_url" : "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3127391",'+
+'      "absolute_magnitude_h" : 22.1,'+
+'      "estimated_diameter" : {'+
+'        "kilometers" : {'+
+'          "estimated_diameter_min" : 0.1010543415,'+
+'          "estimated_diameter_max" : 0.2259643771'+
+'        },'+
+'        "meters" : {'+
+'          "estimated_diameter_min" : 101.054341542,'+
+'          "estimated_diameter_max" : 225.9643771094'+
+'        },'+
+'        "miles" : {'+
+'          "estimated_diameter_min" : 0.0627922373,'+
+'          "estimated_diameter_max" : 0.140407711'+
+'        },'+
+'        "feet" : {'+
+'          "estimated_diameter_min" : 331.5431259047,'+
+'          "estimated_diameter_max" : 741.3529669956'+
+'        }'+
+'      },'+
+'      "is_potentially_hazardous_asteroid" : false,'+
+'      "close_approach_data" : [ {'+
+'        "close_approach_date" : "2016-06-12",'+
+'        "epoch_date_close_approach" : 1465714800000,'+
+'        "relative_velocity" : {'+
+'          "kilometers_per_second" : "9.8901260657",'+
+'          "kilometers_per_hour" : "35604.4538365153",'+
+'          "miles_per_hour" : "22123.2229963614"'+
+'        },'+
+'        "miss_distance" : {'+
+'          "astronomical" : "0.0510081419",'+
+'          "lunar" : "19.8421669006",'+
+'          "kilometers" : "7630709.5",'+
+'          "miles" : "4741503"'+
+'        },'+
+'        "orbiting_body" : "Earth"'+
+'      } ],'+
+'      "orbital_data" : null'+
+'    }';
+AsteroidData obj = parse(json);
+System.assert(obj != null);
+} */
+}
