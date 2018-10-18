@@ -1,4 +1,5 @@
 //Class Name: AsteroidData
+//Author: Calvin Noronha
 public class AsteroidData{
     
     public cls_links links;
