@@ -1,3 +1,4 @@
+//Class Name: AsteroidData
 public class AsteroidData{
     
     public cls_links links;
